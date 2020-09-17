@@ -1,0 +1,17 @@
+{
+  "name": "proffy",
+  "version": "2.0.0",
+  "description": "Plataforma de ensino para alunos e professores.",
+  "main": "index.js",
+  "author": "Anderson <mr.anderson.brito@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  },
+  "devDependencies": {
+    "typescript": "^4.0.2"
+  }
+}
