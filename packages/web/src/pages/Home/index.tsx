@@ -7,7 +7,8 @@ import {
   LogoContainer,
   HeroImage,
   ButtonsContainer,
-  TotalConnections
+  TotalConnections,
+  Welcome
 } from "./styles";
 
 import LogoSVG from "../../assets/images/logo.svg";
@@ -29,6 +30,10 @@ const Home = (): JSX.Element => {
         <HeroImage>
           <LandingSVG />
         </HeroImage>
+        <Welcome>
+          <span>Seja bem-vindo.</span>
+          <span>O que deseja fazer?</span>
+        </Welcome>
 
         <ButtonsContainer>
           <Link href="/study">
