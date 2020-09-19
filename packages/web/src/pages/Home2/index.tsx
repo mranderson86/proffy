@@ -29,7 +29,10 @@ const Home = (): JSX.Element => {
   return (
     <PageLandingContent>
       <Header>
-        <Avatar name="Anderson Gomes" />
+        <Avatar
+          image="https://avatars3.githubusercontent.com/u/36639799?s=460&u=e4f79eccae7c41fdeef4f37ae2640f86577ac25c&v=4"
+          name="Anderson Gomes"
+        />
         <SignOut />
       </Header>
 
@@ -70,7 +73,7 @@ const Home = (): JSX.Element => {
           </ButtonsContainer>
 
           <TotalConnections>
-            Total de 0 conexões já realizadas <PurpleHeartIcon />
+            Total de 999999 conexões já realizadas <PurpleHeartIcon />
           </TotalConnections>
         </ContentSection>
       </Section>

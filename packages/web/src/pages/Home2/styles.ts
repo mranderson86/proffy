@@ -7,8 +7,6 @@ export const PageLandingContent = styled.div`
 
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
-  /* align-items: center; */
 
   color: ${props => props.theme.colors.textPrimary};
   background: ${props => props.theme.colors.primary};
@@ -22,9 +20,20 @@ export const Banner = styled.section`
 
   height: 60vh;
   min-height: 500px;
+
+  @media (min-width: 1100px) {
+    min-height: 400px;
+  }
 `;
 
-export const BannerSection = styled(GlobalContainer)``;
+export const BannerSection = styled(GlobalContainer)`
+  @media (min-width: 1100px) {
+    max-width: 1100px;
+
+    display: flex;
+    justify-content: space-between;
+  }
+`;
 
 export const Section = styled.section`
   display: flex;
@@ -40,11 +49,9 @@ export const ContentSection = styled(GlobalContainer)`
     max-width: 1100px;
 
     display: grid;
-    grid-template-rows: 350px 1fr;
-    grid-template-columns: 2fr 1fr 1fr;
-    grid-template-areas:
-      "logo hero hero"
-      "buttons buttons total";
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "welcome total buttons buttons";
   }
 `;
 
@@ -64,7 +71,6 @@ export const LogoContainer = styled.div`
   }
 
   @media (min-width: 1100px) {
-    grid-area: logo;
     align-self: center;
     text-align: left;
     margin: 0;
@@ -72,6 +78,8 @@ export const LogoContainer = styled.div`
     > h2 {
       text-align: initial;
       font-size: 3.6rem;
+
+      width: 90%;
     }
 
     > svg {
@@ -81,13 +89,18 @@ export const LogoContainer = styled.div`
 `;
 
 export const HeroImage = styled.div`
+  display: flex;
+  justify-content: center;
+
   > svg {
     width: 100%;
+    max-width: 500px;
+
     height: 100%;
+    max-height: 500px;
   }
 
   @media (min-width: 1100px) {
-    grid-area: hero;
     justify-self: end;
   }
 `;
@@ -159,15 +172,21 @@ export const Welcome = styled.div`
   > span + span {
     font-weight: bold;
   }
+
+  @media (min-width: 1100px) {
+    grid-area: welcome;
+
+    height: 10.4rem;
+  }
 `;
 
 export const TotalConnections = styled.span`
-  font-size: 1.4rem;
-  color: ${props => props.theme.colors.textComplement};
-
   display: flex;
   align-items: center;
   justify-content: center;
+
+  font-size: 1.4rem;
+  color: ${props => props.theme.colors.textComplement};
 
   > svg {
     margin-left: 0.8rem;
@@ -175,6 +194,11 @@ export const TotalConnections = styled.span`
 
   @media (min-width: 1100px) {
     grid-area: total;
-    justify-self: end;
+
+    width: 90%;
+    height: 10.4rem;
+
+    margin: 3.2rem 0;
+    justify-self: center;
   }
 `;

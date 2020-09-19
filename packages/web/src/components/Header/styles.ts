@@ -13,4 +13,8 @@ export const NavBarSection = styled(GlobalContainer)`
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media (min-width: 1100px) {
+    max-width: 1100px;
+  }
 `;
