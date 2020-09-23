@@ -2,7 +2,10 @@ import React from "react";
 import Link from "next/link";
 
 import {
-  Container,
+  Section,
+  ContentSection,
+  Banner,
+  BannerSection,
   PageLandingContent,
   LogoContainer,
   HeroImage,
@@ -18,43 +21,62 @@ import StudyIcon from "../../assets/images/icons/study.svg";
 import GiveClassesIcon from "../../assets/images/icons/give-classes.svg";
 import PurpleHeartIcon from "../../assets/images/icons/purple-heart.svg";
 
+import { Header } from "../../components/Header";
+import { Avatar } from "../../components/Avatar";
+import { SignOut } from "../../components/SignOut";
+
 const Home = (): JSX.Element => {
   return (
     <PageLandingContent>
-      <Container>
-        <LogoContainer>
-          <LogoSVG />
-          <h2>Sua plataforma de estudos online.</h2>
-        </LogoContainer>
+      <Header>
+        <Avatar
+          image="https://avatars3.githubusercontent.com/u/36639799?s=460&u=e4f79eccae7c41fdeef4f37ae2640f86577ac25c&v=4"
+          name="Anderson Gomes"
+        />
+        <SignOut />
+      </Header>
 
-        <HeroImage>
-          <LandingSVG />
-        </HeroImage>
-        <Welcome>
-          <span>Seja bem-vindo.</span>
-          <span>O que deseja fazer?</span>
-        </Welcome>
+      <Banner>
+        <BannerSection>
+          <LogoContainer>
+            <LogoSVG />
+            <h2>Sua plataforma de estudos online.</h2>
+          </LogoContainer>
 
-        <ButtonsContainer>
-          <Link href="/study">
-            <a>
-              <StudyIcon />
-              Estudar
-            </a>
-          </Link>
+          <HeroImage>
+            <LandingSVG />
+          </HeroImage>
+        </BannerSection>
+      </Banner>
 
-          <Link href="/give-classes">
-            <a>
-              <GiveClassesIcon />
-              Dar Aulas
-            </a>
-          </Link>
-        </ButtonsContainer>
+      <Section>
+        <ContentSection>
+          <Welcome>
+            <span>Seja bem-vindo.</span>
+            <span>O que deseja fazer?</span>
+          </Welcome>
 
-        <TotalConnections>
-          Total de 0 conexões já realizadas <PurpleHeartIcon />
-        </TotalConnections>
-      </Container>
+          <ButtonsContainer>
+            <Link href="/study">
+              <a>
+                <StudyIcon />
+                Estudar
+              </a>
+            </Link>
+
+            <Link href="/give-classes">
+              <a>
+                <GiveClassesIcon />
+                Dar Aulas
+              </a>
+            </Link>
+          </ButtonsContainer>
+
+          <TotalConnections>
+            Total de 999999 conexões já realizadas <PurpleHeartIcon />
+          </TotalConnections>
+        </ContentSection>
+      </Section>
     </PageLandingContent>
   );
 };

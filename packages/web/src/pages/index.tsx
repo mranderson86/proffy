@@ -1,3 +1,4 @@
-import { Home } from "./Home2";
+import { Home } from "./Home";
+import { Login } from "./Login";
 
-export default Home;
+export default Login;
