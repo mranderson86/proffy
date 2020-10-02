@@ -15,6 +15,7 @@ const theme = {
     textBase: "#6A6180",
     lineWhite: "#E6E6F0",
     inputBackground: "#F8F8FC",
+    textInput: "#C1BCCC",
     buttonText: "#FFFFFF",
     boxBase: "#FFFFFF",
     boxFooter: "#FAFAFC"

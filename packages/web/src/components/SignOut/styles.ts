@@ -1,7 +1,5 @@
 import styled from "styled-components";
 
-// import SignOutIcon from "../../assets/images/icons/sign-out.svg";
-
 export const SignOutStyle = styled.a`
   display: flex;
   justify-content: center;

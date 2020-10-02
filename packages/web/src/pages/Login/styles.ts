@@ -18,7 +18,6 @@ export const Banner = styled.section`
   justify-content: center;
 
   width: 100vw;
-
   height: 60vh;
   min-height: 400px;
 
@@ -31,6 +30,18 @@ export const BannerSection = styled(GlobalContainer)`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  position: relative;
+
+  > svg {
+    width: 100%;
+    height: 100%;
+
+    max-width: 500px;
+    max-height: 400px;
+
+    position: absolute;
+  }
 
   @media (min-width: 1100px) {
     max-width: 1100px;
@@ -46,10 +57,35 @@ export const Section = styled.section`
 
   height: 100%;
 
+  padding-top: 3rem;
+
   background: ${props => props.theme.colors.background};
 `;
 
 export const ContentSection = styled(GlobalContainer)`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+
+    margin-bottom: 2rem;
+  }
+
+  > fieldset {
+    width: 100%;
+    border: none;
+
+    > div + div > input {
+      border-radius: 0 0 0.8rem 0.8rem;
+    }
+  }
+
   @media (min-width: 1100px) {
     max-width: 1100px;
 
@@ -62,7 +98,8 @@ export const ContentSection = styled(GlobalContainer)`
 
 export const LogoContainer = styled.div`
   text-align: center;
-  margin-bottom: 3.2rem;
+  z-index: 2;
+  /* margin-bottom: 3.2rem; */
 
   > svg {
     height: 10rem;
