@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const ButtonStyle = styled.button`
   width: 100%;
-  height: 5rem;
+  height: 5.85rem;
 
   border-radius: 0.8rem;
   border: none;
@@ -17,6 +17,8 @@ export const ButtonStyle = styled.button`
   }
 
   > span {
+    font: 600 1.7rem Archivo;
     color: ${props => props.theme.colors.buttonText};
+    line-height: 2.7rem;
   }
 `;

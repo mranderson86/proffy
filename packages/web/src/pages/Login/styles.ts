@@ -31,6 +31,8 @@ export const BannerSection = styled(GlobalContainer)`
   justify-content: center;
   align-items: center;
 
+  max-width: 500px;
+
   position: relative;
 
   > svg {
@@ -66,6 +68,8 @@ export const ContentSection = styled(GlobalContainer)`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  max-width: 500px;
 
   > div {
     display: flex;

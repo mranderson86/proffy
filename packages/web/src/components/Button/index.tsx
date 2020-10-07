@@ -10,6 +10,7 @@ export interface ButtonProps {
 }
 
 const Button: React.FC<ButtonProps> = ({
+  name,
   onClick,
   children,
   ...rest
