@@ -78,12 +78,20 @@ export const ContentSection = styled(GlobalContainer)`
   }
 
   > fieldset {
+    display: flex;
+
     width: 100%;
     border: none;
+
+    margin-bottom: 2rem;
 
     > div + div > input {
       border-radius: 0 0 0.8rem 0.8rem;
     }
+  }
+
+  > div + div {
+    display: flex;
   }
 
   @media (min-width: 1100px) {

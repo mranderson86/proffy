@@ -16,6 +16,7 @@ import { Title } from "../../components/Title";
 import { Label } from "../../components/Label";
 import { InputField } from "../../components/InputField";
 import { PasswordField } from "../../components/PasswordField";
+import { CheckBoxField } from "../../components/CheckBoxField";
 
 const Login = (): JSX.Element => {
   return (
@@ -40,10 +41,13 @@ const Login = (): JSX.Element => {
 
           <fieldset>
             <InputField name="email" label="E-mail" maxLength={50} />
-            {/* <InputField name="senha" label="Senha" /> */}
-
             <PasswordField name="senha" label="Senha" maxLength={50} />
           </fieldset>
+
+          <div>
+            <CheckBoxField description="Lembra-me" />
+            <Label>Esqueci minha senha</Label>
+          </div>
         </ContentSection>
       </Section>
     </LoginPageContent>
