@@ -90,10 +90,6 @@ export const ContentSection = styled(GlobalContainer)`
     }
   }
 
-  > div + div {
-    display: flex;
-  }
-
   @media (min-width: 1100px) {
     max-width: 1100px;
 

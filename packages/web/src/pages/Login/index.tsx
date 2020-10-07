@@ -17,6 +17,7 @@ import { Label } from "../../components/Label";
 import { InputField } from "../../components/InputField";
 import { PasswordField } from "../../components/PasswordField";
 import { CheckBoxField } from "../../components/CheckBoxField";
+import { Button } from "../../components/Button";
 
 const Login = (): JSX.Element => {
   return (
@@ -48,6 +49,8 @@ const Login = (): JSX.Element => {
             <CheckBoxField description="Lembra-me" />
             <Label>Esqueci minha senha</Label>
           </div>
+
+          <Button name="login">Entrar</Button>
         </ContentSection>
       </Section>
     </LoginPageContent>
