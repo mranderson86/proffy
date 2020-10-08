@@ -11,6 +11,13 @@ export const LoginPageContent = styled.div`
 
   color: ${props => props.theme.colors.textPrimary};
   background: ${props => props.theme.colors.primary};
+
+  @media (min-width: 1100px) {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "banner section";
+  }
 `;
 
 export const Banner = styled.section`
@@ -22,7 +29,15 @@ export const Banner = styled.section`
   min-height: 400px;
 
   @media (min-width: 1100px) {
-    min-height: 400px;
+    grid-area: banner;
+
+    justify-content: flex-end;
+
+    padding-left: 10%;
+    padding-right: 10%;
+
+    width: 100%;
+    height: 100%;
   }
 `;
 
@@ -44,13 +59,6 @@ export const BannerSection = styled(GlobalContainer)`
 
     position: absolute;
   }
-
-  @media (min-width: 1100px) {
-    max-width: 1100px;
-
-    display: flex;
-    justify-content: space-between;
-  }
 `;
 
 export const Section = styled.section`
@@ -62,6 +70,18 @@ export const Section = styled.section`
   padding-top: 3rem;
 
   background: ${props => props.theme.colors.background};
+
+  @media (min-width: 1100px) {
+    grid-area: section;
+
+    justify-content: flex-start;
+    align-items: center;
+
+    padding-left: 10%;
+    padding-right: 10%;
+
+    width: 100%;
+  }
 `;
 
 export const ContentSection = styled(GlobalContainer)`
@@ -95,19 +115,13 @@ export const ContentSection = styled(GlobalContainer)`
   }
 
   @media (min-width: 1100px) {
-    max-width: 1100px;
-
-    display: grid;
-    grid-template-rows: 1fr;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-areas: "welcome total buttons buttons";
+    max-width: 400px;
   }
 `;
 
 export const LogoContainer = styled.div`
   text-align: center;
   z-index: 2;
-  /* margin-bottom: 3.2rem; */
 
   > svg {
     height: 10rem;
